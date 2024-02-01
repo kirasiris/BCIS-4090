@@ -1,0 +1,38 @@
+@charset "utf-8";
+body h1 {
+	color: white;
+	font-family: arial;
+	text-align:center;
+	text-shadow:3px 3px 4px black;
+}
+html {
+	height:100%;
+	background-size:cover;
+	background: linear-gradient(darkgreen,cornsilk);
+	
+
+}
+form{
+	padding:10px;
+	width:20%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#B8E88C;
+	border:solid black 2px;
+}
+label{
+	font-family:arial;
+	font-weight:bold;
+}
+input[type=submit]{
+	background-color:darkgreen;
+	color:white;
+	border-radius:5px;
+	
+}
+input[type=reset]{
+	background-color:darkgreen;
+	color:white;
+	border-radius:5px;
+	
+}
