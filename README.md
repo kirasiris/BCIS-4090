@@ -4,7 +4,7 @@ All the files are divided within their own labs. I already finished the whole pr
 
 However while I was doing it, the labs were closed, so I'm working on divinding the final project into smaller sections according to what X lab asks.
 
-## TEST ONE CODE QUESTIONS
+## TEST #1 CODE QUESTIONS
 
 Write the PHP code that displays the variable SSN with the requisite dashes. For example, if 456123478 is stored in SSN, the display will show 456-12-3478.
 
@@ -62,4 +62,59 @@ $query = "DELETE FROM students WHERE student_id = 123456789";
 $statement = $db->prepare($query);
 $success = $statement->execute();
 $statement->closeCursor();
+```
+
+## TEST #2 CODE QUESTIONS
+
+A form instructs users to select all of their favorite football teams using the check boxes. Write the PHP code to determine if the user has selected the checkbox for the dallas_cowboys. (hint: see pages 215 and 243, 5 points).
+```php
+if(isset($_POST['dallas_cowboys'])){
+    echo "Dallas Cowboys opt. selected";
+} else {
+    echo "Dallas Cowboys opt. not selected";
+}
+```
+
+Write the PHP code for a switch statement that evaluates a variable named student_classification with values FR, SO, JR, and SR. Output should show the ranges of hours for each classification <30, 30-59, 60-89, and >90. (hint: see page 248, 10 points)
+```php
+$student_classification  = 'SR';
+switch ($student_classification) {
+    case 'FR':
+        echo "Hours range: <30";
+        break;
+    case 'SO':
+        echo "Hours range: 30-59";
+        break;
+    case 'JR':
+        echo "Hours range: 60-89";
+        break;
+    case 'SR':
+        echo "Hours range: >90";
+        break;
+}
+```
+## TEST #3 CODE QUESTIONS
+
+Write the PHP code that ensures that the two letter state_code entered by the user is stored as two capital letters in the database. For example, if the user entered tx or Tx, write the line of code that will transform it to TX.
+```php
+$state_code = 'tx';
+echo strtoupper($state_code);
+```
+
+Write the PHP code to generate a random number between 1 and 100.
+```php
+$randomNumber = rand(1, 100);
+echo $randomNumber;
+```
+
+Write the PHP code to determine if a coupon has expired.  The coupon expires on the last day of the month.  If the coupon is valid, set the discount variable to %5 off.  If not, set the discount variable to 0% off and echo a message that the coupon has expired. (HINT: strtotime() function will be really helpful!)
+```php
+$coupon = "2024-12-31"; // Coupon expiration date
+
+if (strtotime($coupon) >= strtotime('last day of this month')) {
+    echo $discount = "5% off"; // Coupon is valid
+} else {
+    $discount = "0% off"; // Coupon has expired
+    echo "Sorry, the coupon has expired.";
+}
 ```
