@@ -1,3 +1,5 @@
+![BCIS - The most boring class!](screenshot.png)
+
 # Please read!
 
 All the files are divided within their own labs. I already finished the whole project during the first week LOL.
