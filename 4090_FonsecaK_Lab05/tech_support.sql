@@ -1,5 +1,4 @@
-﻿---- create tech_support database
-DROP DATABASE IF EXISTS tech_support;
+﻿DROP DATABASE IF EXISTS tech_support;
 CREATE DATABASE tech_support;
 USE tech_support;
 
@@ -492,8 +491,6 @@ INSERT INTO administrators VALUES
 ('admin', 'sesame'),
 ('joel', 'sesame');
 
-
--- Create a user named ts_user
 GRANT SELECT, INSERT, UPDATE, DELETE
 ON *
 TO ts_user@localhost
